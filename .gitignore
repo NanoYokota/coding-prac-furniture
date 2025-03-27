@@ -1,0 +1,9 @@
+.build
+build
+node_modules
+dist
+public
+.log
+.iml
+.DS_Store
+docs

@@ -1,0 +1,28 @@
+extends /_layout-default
+
+prepend config-block
+  - site.page_name = 'プロダクトタイトル'
+
+block content-block
+  include /_header
+
+  main.l-main
+    h2 プロダクトタイトル
+    img(src="/assets/images/item1.jpg.webp" alt="" width="334" height="334")
+    p テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+      | テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+      | テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+    p テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+      | テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+      | テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+    p ¥99,999 +tax
+    dl
+      dt SIZE:
+      dd W999 × D999 × H999
+      dt COLOR:
+      dd テキスト
+      dt MATERIAL:
+      dd テキストテキストテキスト
+    a(href="/products") Back to Products
+
+  include /_footer

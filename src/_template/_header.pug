@@ -1,7 +1,22 @@
-header.p-header
+header.p-header.l-flex.l-padding
   h1
-    img(src="/assets/images/logo.svg" alt="Furniture Design" width="130" height="15")
+    a(href="/")
+      img.p-header__logo(src="/assets/images/logo.svg" alt="Furniture Design" width="130" height="15")
 
-  div
-    span
-    span
+  .p-header__hamburger.js-hamburger
+    span.p-header__hamburger-line.js-hamburger-line
+    span.p-header__hamburger-line.js-hamburger-line
+
+  .p-header__menu.js-global-nav
+    nav
+      ul
+        li.p-header__menu-item
+          a.p-header__menu-link(href="/products") PRODUCTS
+        li.p-header__menu-item
+          a.p-header__menu-link(href="/about") ABOUT
+        li.p-header__menu-item
+          a.p-header__menu-link(href="/company") COMPANY
+        li.p-header__menu-item
+          a.p-header__menu-link(href="mailto:xxxxx@xxx.xxx?subject=%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B") CONTACT
+
+  .p-header__background.js-hamburger-bg

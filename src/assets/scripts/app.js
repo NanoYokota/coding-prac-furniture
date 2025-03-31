@@ -23,4 +23,18 @@ document.addEventListener("DOMContentLoaded", () => {
   //   return new Modal(el);
   // });
 
+  // ハンバーガーメニュー
+  const hamburger = document.querySelector('.js-hamburger');
+  const hamburgerLines = document.querySelectorAll('.js-hamburger-line');
+  const nav = document.querySelector('.js-global-nav');
+  const bg = document.querySelector('.js-hamburger-bg');
+
+  hamburger.addEventListener('click', () => {
+    const isOpenClass = 'is-open';
+    hamburgerLines.forEach(hamburgerLine => {
+      hamburgerLine.classList.toggle(isOpenClass);
+    });
+    nav.classList.toggle(isOpenClass);
+    bg.classList.toggle(isOpenClass);
+  });
 });

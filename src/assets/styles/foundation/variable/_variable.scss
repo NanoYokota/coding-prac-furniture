@@ -29,6 +29,12 @@ $color-youtube: #ff0000 !default;
 // $pjc-gs-03: #----- !default;
 
 $pjc-txt-base: #333 !default;
+$pjc-txt-white: #fff !default;
+
+// Background Color
+// -----------------
+$bg-black: #333 !default;
+$bg-white: #fff !default;
 
 // Font Family
 // ---------------------------------------------
@@ -59,6 +65,7 @@ $font-family-base: 'Noto Sans JP', 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-se
 $layer-header: 7000 !default;
 $layer-gnav: 8000 !default;
 $layer-modal: 9000 !default;
+$layer-background: 1000 !default;
 
 // Path
 // ---------------------------------------------

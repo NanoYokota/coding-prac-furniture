@@ -2,6 +2,105 @@
 @use 'sass:math';
 
 .p-header {
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: $color-white;
+
+  position: sticky;
+  top: 0;
+
   @include mq-up(md) {
+  }
+
+  &__logo {
+    width: 180px;
+    height: auto;
+  }
+
+  &__hamburger {
+    width: 30px;
+    height: 30px;
+
+    position: relative;
+  }
+
+  &__hamburger-line {
+    display: block;
+    width: 30px;
+    height: 2px;
+
+    background-color: $bg-black;
+
+    position: absolute;
+    z-index: $layer-header;
+
+    transition-property: transform, top, bottom;
+    transition-duration: 0.5s;
+
+    &.is-open {
+      background-color: $bg-white;
+    }
+
+    &:first-child {
+      top: 10px;
+
+      &.is-open {
+        top: 50%;
+        transform: rotate(45deg);
+      }
+    }
+
+    &:nth-child(2) {
+      bottom: 10px;
+
+      &.is-open {
+        bottom: auto;
+        top: 50%;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__menu {
+    display: none;
+
+    position: absolute;
+    top: 36px;
+    left: 50px;
+    z-index: $layer-gnav;
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  &__menu-item {
+    + .p-header__menu-item {
+      margin-top: 14px;
+    }
+  }
+
+  &__menu-link {
+    color: $pjc-txt-white;
+  }
+
+  &__background {
+    display: none;
+
+    background-color: $color-black;
+    opacity: 0.8;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: $layer-background;
+
+    &.is-open {
+      display: block;
+    }
   }
 }

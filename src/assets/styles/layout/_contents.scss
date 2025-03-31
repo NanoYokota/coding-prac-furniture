@@ -14,3 +14,66 @@
 //     overflow-x: clip;
 //   }
 // }
+
+.l-padding {
+  padding: 0 40px;
+}
+
+.l-flex {
+  display: flex;
+
+  &--center-horizontal {
+    @extend .l-flex;
+
+    justify-content: center;
+  }
+
+  &--between-horizontal {
+    @extend .l-flex;
+
+    justify-content: space-between;
+  }
+
+  &--evenly-horizontal {
+    @extend .l-flex;
+
+    justify-content: space-evenly;
+  }
+
+  &--start-horizontal {
+    @extend .l-flex;
+
+    justify-content: flex-start;
+  }
+
+  &--end-horizontal {
+    @extend .l-flex;
+
+    justify-content: flex-end;
+  }
+
+  &--center-vertical {
+    @extend .l-flex;
+
+    align-items: center;
+  }
+
+  &--center-all {
+    @extend .l-flex--center-horizontal;
+    @extend .l-flex--center-vertical;
+  }
+
+  &--expand {
+    @extend .l-flex;
+
+    > * {
+      flex-shrink: 0;
+    }
+  }
+
+  &--expand-scroll {
+    @extend .l-flex--expand;
+
+    overflow-x: scroll;
+  }
+}

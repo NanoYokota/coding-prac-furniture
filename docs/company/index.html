@@ -24,9 +24,33 @@
   </head>
   <body>
     <div class="l-wrapper">
-      <header class="p-header">
-        <h1><img src="../assets/images/logo.svg" alt="Furniture Design" width="130" height="15" /></h1>
-        <div><span></span><span></span></div>
+      <header class="p-header l-flex l-padding">
+        <h1>
+          <a href="/"
+            ><img class="p-header__logo" src="../assets/images/logo.svg" alt="Furniture Design" width="130" height="15"
+          /></a>
+        </h1>
+        <div class="p-header__hamburger js-hamburger">
+          <span class="p-header__hamburger-line js-hamburger-line"></span
+          ><span class="p-header__hamburger-line js-hamburger-line"></span>
+        </div>
+        <div class="p-header__menu js-global-nav">
+          <nav>
+            <ul>
+              <li class="p-header__menu-item"><a class="p-header__menu-link" href="../products">PRODUCTS</a></li>
+              <li class="p-header__menu-item"><a class="p-header__menu-link" href="../about">ABOUT</a></li>
+              <li class="p-header__menu-item"><a class="p-header__menu-link" href="../company">COMPANY</a></li>
+              <li class="p-header__menu-item">
+                <a
+                  class="p-header__menu-link"
+                  href="mailto:xxxxx@xxx.xxx?subject=%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B"
+                  >CONTACT</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="p-header__background js-hamburger-bg"></div>
       </header>
       <main class="l-main">
         <h2>Company</h2>

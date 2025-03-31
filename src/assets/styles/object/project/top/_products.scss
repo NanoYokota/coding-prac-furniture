@@ -1,0 +1,11 @@
+.p-products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 20px;
+
+  font-size: 0.75rem;
+
+  &__info {
+    margin-top: 10px;
+  }
+}

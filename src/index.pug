@@ -21,17 +21,17 @@ prepend config-block
 block content-block
   include /_header
 
-  main.l-main
-    - for (let iProduct = 0; iProduct < 8; iProduct++)
-      article.p-product
-        a(href="/products")
-          div
-            img(src=`/assets/images/item${iProduct + 1}.jpg.webp` alt="プロダクトタイトルプロダクトタイトル" width="157" height="157")
-          div
-            h2
-              a(href="/item1") プロダクトタイトルプロダクトタイトル
-            p ¥99,999 +tax
+  main.l-main.l-padding
+    .p-products
+      - for (let iProduct = 0; iProduct < 8; iProduct++)
+        article.p-products__product
+          a(href="/item1")
+            div
+              img(src=`/assets/images/item${iProduct + 1}.jpg.webp` alt="プロダクトタイトルプロダクトタイトル" width="157" height="157")
+            .p-products__info
+              h2.p-products__name プロダクトタイトルプロダクトタイトル
+              p ¥99,999 +tax
 
-    a(href="/products") View More
+    a.p-view-more.c-link--center(href="/products") View More
 
   include /_footer

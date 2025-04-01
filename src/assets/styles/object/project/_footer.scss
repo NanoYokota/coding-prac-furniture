@@ -2,6 +2,23 @@
 @use 'sass:math';
 
 .p-footer {
+  padding-bottom: 20px;
+  margin-top: 102px;
+
   @include mq-up(md) {
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__list-item {
+    + .p-footer__list-item {
+      margin-left: 30px;
+    }
+  }
+
+  &__copy {
+    font-size: fn-rem(10);
   }
 }

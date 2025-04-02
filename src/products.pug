@@ -6,10 +6,10 @@ prepend config-block
 block content-block
   include /_header
 
-  main.l-main.l-padding-horizontal
-    h2.p-products-title Products
+  main.l-main.l-padding-horizontal.l-container
+    h2.c-heading Products
 
-    .p-products
+    .p-products.u-mt-30
       - for (let iProduct = 0; iProduct < 12; iProduct++)
         article.p-products__product
           a(href="/item1")

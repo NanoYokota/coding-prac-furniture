@@ -1,0 +1,9 @@
+.p-about {
+  &__text {
+    line-height: 1.9;
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
+  }
+}

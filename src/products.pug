@@ -6,21 +6,23 @@ prepend config-block
 block content-block
   include /_header
 
-  main.l-main
-    - for (let iProduct = 0; iProduct < 12; iProduct++)
-      article.p-product
-        a(href="/products") 
-          div
-            img(src=`/assets/images/item${iProduct + 1}.jpg.webp` alt="プロダクトタイトルプロダクトタイトル" width="157" height="157")
-          div
-            h2
-              a(href="/item1") プロダクトタイトルプロダクトタイトル
-            p ¥99,999 +tax
+  main.l-main.l-padding-horizontal
+    h2.p-products-title Products
 
-    ul
-      li
-        a(href="/products") 1
-      li
+    .p-products
+      - for (let iProduct = 0; iProduct < 12; iProduct++)
+        article.p-products__product
+          a(href="/item1")
+            div
+              img(src=`/assets/images/item${iProduct + 1}.jpg.webp` alt="プロダクトタイトルプロダクトタイトル" width="157" height="157")
+            .p-products__info
+              h3.p-products__name プロダクトタイトルプロダクトタイトル
+              p ¥99,999 +tax
+
+    ul.p-products-pagination
+      li.p-products-pagination__item
+        | 1
+      li.p-products-pagination__item
         a(href="/products2") 2
 
   include /_footer

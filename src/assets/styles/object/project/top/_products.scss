@@ -2,10 +2,21 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px 20px;
+  margin-top: 30px;
 
   font-size: 0.75rem;
 
   &__info {
     margin-top: 10px;
+  }
+}
+
+.p-products-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+
+  &__item {
+    padding: 0 20px;
   }
 }

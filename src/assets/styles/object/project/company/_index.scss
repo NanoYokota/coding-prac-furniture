@@ -1,0 +1,26 @@
+@use '../../../global' as *;
+
+.p-company-info {
+  padding: 20px 10px;
+
+  font-size: fn-rem(14);
+
+  + .p-company-info {
+    border-top: 1px solid $color-border;
+  }
+
+  &__description {
+    margin-top: 10px;
+  }
+}
+
+.p-company-map {
+  margin-top: 20px;
+
+  filter: grayscale(1);
+
+  > iframe {
+    height: 300px;
+    width: 100%;
+  }
+}

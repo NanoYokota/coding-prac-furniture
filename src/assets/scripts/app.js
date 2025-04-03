@@ -29,12 +29,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector('.js-global-nav');
   const bg = document.querySelector('.js-hamburger-bg');
 
+  const isOpenClass = 'is-open';
+
   hamburger.addEventListener('click', () => {
-    const isOpenClass = 'is-open';
     hamburgerLines.forEach(hamburgerLine => {
       hamburgerLine.classList.toggle(isOpenClass);
     });
     nav.classList.toggle(isOpenClass);
     bg.classList.toggle(isOpenClass);
+  });
+
+  // ハンバーガーの背景をクリックしたら閉じる
+  bg.addEventListener('click', () => {
+    hamburgerLines.forEach(hamburgerLine => {
+      hamburgerLine.classList.remove(isOpenClass);
+    });
+    nav.classList.remove(isOpenClass);
+    bg.classList.remove(isOpenClass);
   });
 });

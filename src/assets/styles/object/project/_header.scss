@@ -2,42 +2,51 @@
 @use 'sass:math';
 
 .p-header {
-  height: 80px;
-  justify-content: space-between;
+  display: flex;
   align-items: center;
+  height: 80px;
 
   background-color: $color-white;
+
+  font-size: fn-rem(14);
 
   position: sticky;
   top: 0;
 
+
   @include mq-up(md) {
+  }
+
+  &__contents {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__logo {
     width: 180px;
     height: auto;
   }
+}
 
-  &__hamburger {
-    width: 30px;
-    height: 30px;
+.p-header-hamburger {
+  width: 30px;
+  height: 30px;
 
-    position: relative;
-  }
+  position: relative;
 
-  &__hamburger-line {
+  &__line {
     display: block;
     width: 30px;
     height: 2px;
 
     background-color: $bg-black;
 
+    transition-property: transform, top, bottom;
+    transition-duration: 0.5s;
     position: absolute;
     z-index: $layer-header;
 
-    transition-property: transform, top, bottom;
-    transition-duration: 0.5s;
 
     &.is-open {
       background-color: $bg-white;
@@ -47,8 +56,8 @@
       top: 10px;
 
       &.is-open {
-        top: 50%;
         transform: rotate(45deg);
+        top: 50%;
       }
     }
 
@@ -56,51 +65,51 @@
       bottom: 10px;
 
       &.is-open {
+        transform: rotate(-45deg);
         bottom: auto;
         top: 50%;
-        transform: rotate(-45deg);
       }
     }
   }
+}
 
-  &__menu {
-    display: none;
+.p-header-menu {
+  transition-property: left;
+  transition-duration: 0.5s;
+  position: absolute;
+  top: 36px;
+  left: -100%;
+  z-index: $layer-gnav;
 
-    position: absolute;
-    top: 36px;
+  &.is-open {
     left: 50px;
-    z-index: $layer-gnav;
-
-    &.is-open {
-      display: block;
-    }
   }
 
-  &__menu-item {
-    + .p-header__menu-item {
+  &__item {
+    + .p-header-menu__item {
       margin-top: 14px;
     }
   }
 
-  &__menu-link {
+  &__link {
     color: $pjc-txt-white;
   }
+}
 
-  &__background {
-    display: none;
+.p-header-background {
+  display: none;
 
-    background-color: $color-black;
-    opacity: 0.8;
+  background-color: $color-black;
+  opacity: 0.8;
 
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: $layer-background;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: $layer-background;
 
-    &.is-open {
-      display: block;
-    }
+  &.is-open {
+    display: block;
   }
 }

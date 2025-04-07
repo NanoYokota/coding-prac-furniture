@@ -24,25 +24,32 @@
   </head>
   <body>
     <div class="l-wrapper">
-      <header class="p-header l-flex l-padding-horizontal">
-        <h1>
-          <a href="/"
-            ><img class="p-header__logo" src="../assets/images/logo.svg" alt="Furniture Design" width="130" height="15"
-          /></a>
-        </h1>
-        <div class="p-header__hamburger js-hamburger">
-          <span class="p-header__hamburger-line js-hamburger-line"></span
-          ><span class="p-header__hamburger-line js-hamburger-line"></span>
+      <header class="p-header">
+        <div class="p-header__contents l-container-horizontal">
+          <h1>
+            <a href="/"
+              ><img
+                class="p-header__logo"
+                src="../assets/images/logo.svg"
+                alt="Furniture Design"
+                width="130"
+                height="15"
+            /></a>
+          </h1>
+          <div class="p-header-hamburger js-hamburger">
+            <span class="p-header-hamburger__line js-hamburger-line"></span
+            ><span class="p-header-hamburger__line js-hamburger-line"></span>
+          </div>
         </div>
-        <div class="p-header__menu js-global-nav">
+        <div class="p-header-menu js-global-nav">
           <nav>
             <ul>
-              <li class="p-header__menu-item"><a class="p-header__menu-link" href="../products">PRODUCTS</a></li>
-              <li class="p-header__menu-item"><a class="p-header__menu-link" href="../about">ABOUT</a></li>
-              <li class="p-header__menu-item"><a class="p-header__menu-link" href="../company">COMPANY</a></li>
-              <li class="p-header__menu-item">
+              <li class="p-header-menu__item"><a class="p-header-menu__link" href="../products">PRODUCTS</a></li>
+              <li class="p-header-menu__item"><a class="p-header-menu__link" href="../about">ABOUT</a></li>
+              <li class="p-header-menu__item"><a class="p-header-menu__link" href="../company">COMPANY</a></li>
+              <li class="p-header-menu__item">
                 <a
-                  class="p-header__menu-link"
+                  class="p-header-menu__link"
                   href="mailto:xxxxx@xxx.xxx?subject=%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B"
                   >CONTACT</a
                 >
@@ -50,7 +57,7 @@
             </ul>
           </nav>
         </div>
-        <div class="p-header__background js-hamburger-bg"></div>
+        <div class="p-header-background js-hamburger-bg"></div>
       </header>
       <main class="l-main">
         <h2>プロダクトタイトル</h2>
@@ -74,13 +81,15 @@
         </dl>
         <a href="../products">Back to Products</a>
       </main>
-      <footer class="p-footer l-padding-horizontal">
-        <ul class="p-footer__list">
-          <li class="p-footer__list-item"><a href="https://www.instagram.com/" target="_blank">INSTAGRAM</a></li>
-          <li class="p-footer__list-item"><a href="https://x.com" target="_blank">TWITTER</a></li>
-          <li class="p-footer__list-item"><a href="https://www.facebook.com/" target="_blank">FACEBOOK</a></li>
-        </ul>
-        <small class="p-footer__copy">© Furniture Design</small>
+      <footer class="p-footer">
+        <div class="p-footer__contents l-container-horizontal">
+          <ul class="p-footer__list">
+            <li class="p-footer__list-item"><a href="https://www.instagram.com/" target="_blank">INSTAGRAM</a></li>
+            <li class="p-footer__list-item"><a href="https://x.com" target="_blank">TWITTER</a></li>
+            <li class="p-footer__list-item"><a href="https://www.facebook.com/" target="_blank">FACEBOOK</a></li>
+          </ul>
+          <small class="p-footer__copy">© Furniture Design</small>
+        </div>
       </footer>
     </div>
     <!-- javascript-->

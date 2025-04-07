@@ -1,5 +1,9 @@
 @forward 'products';
 
+@use '../../../global' as *;
+
 .p-view-more {
   margin-top: 40px;
+
+  font-size: fn-rem(14);
 }

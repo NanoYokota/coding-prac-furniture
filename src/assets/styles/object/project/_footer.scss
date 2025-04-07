@@ -2,10 +2,19 @@
 @use 'sass:math';
 
 .p-footer {
-  padding-bottom: 20px;
-  margin-top: 102px;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
 
   @include mq-up(md) {
+  }
+
+  &__contents {
+    @include mq-up(md) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__list {

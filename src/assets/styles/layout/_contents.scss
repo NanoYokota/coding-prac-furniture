@@ -1,84 +1,23 @@
 @use '../global' as *;
 
-// .l-wrapper {
-//   display: flex;
-//   flex-direction: column;
-//   min-height: 100vh;
-// }
+.l-wrapper {
+  min-height: 100vh;
 
-// .l-main {
-//   max-width: 100%;
-//   flex: 1;
-//   overflow-x: hidden;
-//   @supports (overflow-x: clip) {
-//     overflow-x: clip;
-//   }
-// }
-
-.l-padding-horizontal {
-  padding-right: 40px;
-  padding-left: 40px;
+  position: relative;
 }
 
-.l-flex {
-  display: flex;
-
-  &--center-horizontal {
-    @extend .l-flex;
-
-    justify-content: center;
-  }
-
-  &--between-horizontal {
-    @extend .l-flex;
-
-    justify-content: space-between;
-  }
-
-  &--evenly-horizontal {
-    @extend .l-flex;
-
-    justify-content: space-evenly;
-  }
-
-  &--start-horizontal {
-    @extend .l-flex;
-
-    justify-content: flex-start;
-  }
-
-  &--end-horizontal {
-    @extend .l-flex;
-
-    justify-content: flex-end;
-  }
-
-  &--center-vertical {
-    @extend .l-flex;
-
-    align-items: center;
-  }
-
-  &--center-all {
-    @extend .l-flex--center-horizontal;
-    @extend .l-flex--center-vertical;
-  }
-
-  &--expand {
-    @extend .l-flex;
-
-    > * {
-      flex-shrink: 0;
-    }
-  }
-
-  &--expand-scroll {
-    @extend .l-flex--expand;
-
-    overflow-x: scroll;
-  }
+.l-main {
+  padding-bottom: 160px;
 }
 
 .l-container {
   margin-top: 40px;
+}
+
+.l-container-horizontal {
+  max-width: 1360px;
+  padding-right: 40px;
+  padding-left: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }

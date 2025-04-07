@@ -6,34 +6,35 @@ prepend config-block
 block content-block
   include /_header
 
-  main.l-main.l-padding-horizontal.l-container
+  main.l-main.l-container-horizontal.l-container
     h2.c-heading Company
 
-    .u-mt-30
-      dl.p-company-info
-        dt 社名
-        dd.p-company-info__description 株式会社ファニチャーデザイン
-      dl.p-company-info
-        dt 住所
-        dd.p-company-info__description 〒107-0062 東京都港区南青山１丁目××××××
-      dl.p-company-info
-        dt 設立
-        dd.p-company-info__description XXXX年XX月
-      dl.p-company-info
-        dt 資本金
-        dd.p-company-info__description XXXX万円
-      dl.p-company-info
-        dt 従業員数
-        dd.p-company-info__description XX名
-      dl.p-company-info
-        dt 事業内容
-        dd.p-company-info__description
-          ul
-            li 家具、インテリアの企画・生産
-            li 家具、インテリアの販売
-            li 店舗の企画・デザイン・設計
+    .u-max-width-600
+      .u-mt-30
+        dl.p-company-info
+          dt.p-company-info__title 社名
+          dd.p-company-info__description 株式会社ファニチャーデザイン
+        dl.p-company-info
+          dt.p-company-info__title 住所
+          dd.p-company-info__description 〒107-0062 東京都港区南青山１丁目××××××
+        dl.p-company-info
+          dt.p-company-info__title 設立
+          dd.p-company-info__description XXXX年XX月
+        dl.p-company-info
+          dt.p-company-info__title 資本金
+          dd.p-company-info__description XXXX万円
+        dl.p-company-info
+          dt.p-company-info__title 従業員数
+          dd.p-company-info__description XX名
+        dl.p-company-info
+          dt.p-company-info__title 事業内容
+          dd.p-company-info__description
+            ul
+              li 家具、インテリアの企画・生産
+              li 家具、インテリアの販売
+              li 店舗の企画・デザイン・設計
 
-    .p-company-map
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6482.583224704448!2d139.725615!3d35.669821!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c820ac932eb%3A0xc68079dd10afd971!2z44CSMTA3LTAwNjIg5p2x5Lqs6YO95riv5Yy65Y2X6Z2S5bGx77yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1743128679294!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      .p-company-map
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6482.583224704448!2d139.725615!3d35.669821!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c820ac932eb%3A0xc68079dd10afd971!2z44CSMTA3LTAwNjIg5p2x5Lqs6YO95riv5Yy65Y2X6Z2S5bGx77yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1743128679294!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
   include /_footer

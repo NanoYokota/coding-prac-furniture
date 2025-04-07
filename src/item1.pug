@@ -6,23 +6,28 @@ prepend config-block
 block content-block
   include /_header
 
-  main.l-main
-    h2 プロダクトタイトル
-    img(src="/assets/images/item1.jpg.webp" alt="" width="334" height="334")
-    p テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-      | テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-      | テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-    p テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-      | テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-      | テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-    p ¥99,999 +tax
-    dl
-      dt SIZE:
-      dd W999 × D999 × H999
-      dt COLOR:
-      dd テキスト
-      dt MATERIAL:
-      dd テキストテキストテキスト
-    a(href="/products") Back to Products
+  main.l-main.l-container-horizontal.l-container
+    h2.c-heading プロダクトタイトル
+
+    .u-mt-30
+      div
+        img(src="/assets/images/item1.jpg.webp" alt="" width="334" height="334")
+      .p-item-info
+        p.p-item-info__text テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          | テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          | テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        p.p-item-info__text テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          | テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          | テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        p.p-item-info__text ¥99,999 +tax
+        dl.p-item-info__table
+          dt SIZE:
+          dd W999 × D999 × H999
+          dt COLOR:
+          dd テキスト
+          dt MATERIAL:
+          dd テキストテキストテキスト
+
+    a.p-item-back.c-link--center(href="/products") Back to Products
 
   include /_footer

@@ -1,9 +1,30 @@
-.p-item {}
+@use '../../../global' as *;
+
+.p-item {
+  max-width: 800px;
+
+  @include mq-up(md) {
+    display: grid;
+    grid-template-columns: 25fr 21fr;
+    gap: 8%;
+  }
+}
+
+.p-item-image {
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+}
 
 .p-item-info {
   margin-top: 30px;
 
   font-size: fn-rem(14);
+
+  @include mq-up(md) {
+    margin-top: 0;
+  }
 
   &__text {
     + .p-item-info__text {

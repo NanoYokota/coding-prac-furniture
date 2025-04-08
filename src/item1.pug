@@ -9,9 +9,9 @@ block content-block
   main.l-main.l-container-horizontal.l-container
     h2.c-heading プロダクトタイトル
 
-    .u-mt-30
-      div
-        img(src="/assets/images/item1.jpg.webp" alt="" width="334" height="334")
+    .p-item.u-mt-30
+      .p-item-image
+        img.p-item-image__image(src="/assets/images/item1.jpg.webp" alt="" width="334" height="334")
       .p-item-info
         p.p-item-info__text テキストテキストテキストテキストテキストテキストテキストテキストテキスト
           | テキストテキストテキストテキストテキストテキストテキストテキストテキスト
@@ -21,11 +21,11 @@ block content-block
           | テキストテキストテキストテキストテキストテキストテキストテキストテキスト
         p.p-item-info__text ¥99,999 +tax
         dl.p-item-info__table
-          dt SIZE:
+          dt SIZE：
           dd W999 × D999 × H999
-          dt COLOR:
+          dt COLOR：
           dd テキスト
-          dt MATERIAL:
+          dt MATERIAL：
           dd テキストテキストテキスト
 
     a.p-item-back.c-link--center(href="/products") Back to Products

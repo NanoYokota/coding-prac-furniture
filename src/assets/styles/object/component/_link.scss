@@ -1,5 +1,11 @@
+@use '../../global' as *;
+
 .c-link {
+  font-size: fn-rem(14);
+
   &--center {
+    @extend .c-link;
+
     display: block;
     width: 100%;
     text-align: center;

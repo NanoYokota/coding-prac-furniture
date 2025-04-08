@@ -42,8 +42,12 @@ export default function (eleventyConfig) {
 
       // 絶対パスを置換する
       content = content.replace(
-        /(src|href)="\/([^"]+)"/g,
+        /(src|href)="\/([^"]*)"/g,
         (_, p1, p2) => {
+          // ルートパス（"/"）の場合は、prefix をそのまま使用
+          if (p2 === "") {
+            return `${p1}="${prefix}"`;
+          }
           return `${p1}="${prefix}${p2}"`;
         }
       );

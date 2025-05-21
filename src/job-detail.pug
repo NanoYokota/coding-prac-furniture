@@ -1,0 +1,35 @@
+extends /src/_template/_layout-default.pug
+
+block append config
+  - config.title = '求人詳細'
+  - config.pageId = 'job-detail'
+  - config.header.isFluid = false
+  - config.footer.isFluid = false
+
+block body
+  include /src/_template/_header.pug
+
+  main.l-main.p-job-detail-page-main
+    .l-container
+      h1 求人詳細
+
+      article.p-job-detail
+        h2 株式会社〇〇
+        dl
+          dt 職種
+          dd Webエンジニア
+          dt 給与
+          dd 月給30万円～
+          dt 勤務地
+          dd 東京都千代田区
+          dt 仕事内容
+          dd 自社サービスの開発、運用業務全般をお任せします。
+          dt 応募資格
+          dd Webアプリケーションの開発経験3年以上
+          dt 待遇・福利厚生
+          dd 各種社会保険完備、交通費支給、昇給年1回
+
+      div
+        a(href="jobs.html").back-link 求人一覧へ戻る
+
+  include /src/_template/_footer.pug

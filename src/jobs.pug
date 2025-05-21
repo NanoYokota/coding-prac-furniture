@@ -1,0 +1,35 @@
+extends /src/_template/_layout-default.pug
+
+block append config
+  - config.title = '求人情報一覧'
+  - config.pageId = 'jobs'
+  - config.header.isFluid = false
+  - config.footer.isFluid = false
+
+block body
+  include /src/_template/_header.pug
+
+  main.l-main.p-jobs-page-main
+    .l-container
+      h1 求人情報一覧
+      ul.p-jobs-list
+        li
+          h2 株式会社〇〇
+          p 職種: Webエンジニア
+          p 給与: 月給30万円～
+          p 勤務地: 東京都千代田区
+          a(href="job-detail-1.html") 詳細を見る
+        li
+          h2 株式会社△△
+          p 職種: デザイナー
+          p 給与: 月給28万円～
+          p 勤務地: 東京都渋谷区
+          a(href="job-detail-2.html") 詳細を見る
+        li
+          h2 株式会社□□
+          p 職種: プロジェクトマネージャー
+          p 給与: 月給35万円～
+          p 勤務地: 東京都新宿区
+          a(href="job-detail-3.html") 詳細を見る
+
+  include /src/_template/_footer.pug
